@@ -1,0 +1,24 @@
+// reset
+@import "vendor/reset";
+// vars
+@import "vars";
+
+html, body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 10px;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+// Components
+@import "components/container";
+@import "components/header";
+@import "components/main";
+@import "components/game";
+@import "components/board";
+@import "components/cell";
+@import "components/control";

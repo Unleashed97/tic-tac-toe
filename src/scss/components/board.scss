@@ -1,0 +1,23 @@
+// .board{
+//     display: table;
+//     border-collapse: collapse;
+//     border-style: hidden;
+//     &__body{
+//         display: flex;
+//         flex-wrap: wrap;
+//         width: 600px;
+//         height: 600px;
+//     }
+
+//     &__row{
+//         display: flex;
+//         width: 100%;
+//     }
+// }
+
+.board{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+}
