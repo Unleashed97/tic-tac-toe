@@ -1,25 +1,19 @@
-// .cell{
-//     width: calc(100% / 3);
-
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     // background-color: #AFD6F8;
-//     border: 10px solid #66DBF8;
-//     font-size: 50px;
-// }
-
 .cell{
     width: calc(100% / 3);
+    height: calc(100% / 3);
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border:0;
+    background: none;
 
     font-size: 120px;
     cursor: pointer;
 
     border-right: 8px solid #66DBF8;
     border-bottom: 8px solid #66DBF8;
+    transition: background-color .2s linear;
 
     &:nth-child(3n){
         border-right: 0;
@@ -27,5 +21,9 @@
 
     &:nth-last-child(-n+3){
         border-bottom: 0;
+    }
+
+    &:hover{
+        background-color:#D2FFFF;
     }
 }

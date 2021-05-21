@@ -8,37 +8,14 @@ const handleClickCell = ()=>{
 
 }
 
-const Board = () => {
+const Board = ({cells, click}) => {
     return (
-        // <table className="board">
-        //     <tbody className="board__body">
-        //         <tr className="board__row">
-        //             <Cell />
-        //             <Cell />
-        //             <Cell />
-        //         </tr>
-        //         <tr className="board__row">
-        //             <Cell />
-        //             <Cell />
-        //             <Cell />
-        //         </tr>
-        //         <tr className="board__row">
-        //             <Cell />
-        //             <Cell />
-        //             <Cell />
-        //         </tr>
-        //     </tbody>
-        // </table>
         <div className="board">
-            <Cell onClick={handleClickCell}/>
-            <Cell onClick={handleClickCell}/>
-            <Cell onClick={handleClickCell}/>
-            <Cell onClick={handleClickCell}/>
-            <Cell onClick={handleClickCell}/>
-            <Cell onClick={handleClickCell}/>
-            <Cell onClick={handleClickCell}/>
-            <Cell onClick={handleClickCell}/>
-            <Cell onClick={handleClickCell}/>
+            {
+                cells.map((cell, index) =>(
+                    <Cell key={index} value={cell} onClick={()=> click(index)} />
+                ))
+            }
         </div>
     )
 }

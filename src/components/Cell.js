@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Cell = () => {
+const Cell = (props) => {
     return (
-        <span className="cell">X</span>
+        <button className="cell" onClick={props.onClick}>{props.value}</button>
     )
 }
 
