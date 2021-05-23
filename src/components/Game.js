@@ -10,6 +10,8 @@ const Game = () => {
 
     const [xIsNext, setXIsNext] = useState(true);
 
+    const [score, setScore] = useState(0);
+
     const winner = calculateWinner(board);
 
     const handleCellClick = (index)=>{
@@ -24,9 +26,30 @@ const Game = () => {
         setXIsNext(!xIsNext);
     }
 
+    // const score = () =>{
+    //     return (
+    //         <p></p>
+    //     )
+    // }
+
+    const startNewGame = ()=>{
+        return (
+            <button className="btn btn--start" onClick={() => setBoard(Array(9).fill(null))}>Start new game</button>
+        )
+    }
+
     return (
         <div className="game">
+            <div className="score">
+                {/* { score() } */}
+                { startNewGame() }
+            </div>
             <Board cells={board} click={handleCellClick}/>
+            <p className="game__info">
+                {
+                    winner ? 'Winner is ' + winner : 'Next move is ' + (xIsNext ? 'X' : 'O')
+                }
+            </p>
         </div>
     )
 }

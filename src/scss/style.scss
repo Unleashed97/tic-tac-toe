@@ -14,6 +14,26 @@ html, body{
     box-sizing: border-box;
 }
 
+.btn{
+    border-radius: 10px;
+    border: 2px solid #66DBF8;
+    background: transparent;
+    color: black;
+
+    transition: background .2s linear, color .2s linear;
+
+    &:hover{
+        background: #66DBF8;
+        color: white;
+    }
+
+    &--start{
+        padding: 8px 15px;
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+}
+
 // Components
 @import "components/container";
 @import "components/header";
